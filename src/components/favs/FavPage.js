@@ -5,13 +5,7 @@ import { connect } from "react-redux";
 
 const FavPage = ({ characters = [0] }) => {
   function renderCharacter(char, i) {
-    return (
-      <Card
-        hide
-        {...localStorage.getItem("storage").characters.favorites}
-        key={i}
-      />
-    );
+    return <Card hide {...char} key={i} />;
   }
   return (
     <div className={styles.container}>

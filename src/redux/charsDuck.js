@@ -80,7 +80,7 @@ export const addToFavoritesAction = () => (dispatch, getState) => {
     characters: { ...getState().characters, array: [...array, favorites] },
     user: { ...getState().user },
   };
-  localStorage.storage = JSON.stringify(storage);
+  //   localStorage.storage = JSON.stringify(storage);
   dispatch({
     type: ADD_TO_FAVORITES,
     payload: { array: [...array], favorites: [...favorites] },
